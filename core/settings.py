@@ -130,10 +130,9 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 LANGUAGES = (
     ('uz', 'Uzbek'),
     ('en', 'English'),
-    ('ru', 'Russian'),
 )
 
-MODELTRANSLATION_LANGUAGE = ('uz', 'ru', 'en')
+MODELTRANSLATION_LANGUAGE = ('uz',  'en')
 
 # MODELTRANSLATION_FALLBACK_LANGUAGES = ('en', 'de')
 

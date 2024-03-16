@@ -10,6 +10,11 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Technology(models.Model):
+    title = models.CharField(max_length=255)
+    def __str__(self):
+        return self.title
 
 class Skill(models.Model):
     title = models.CharField(max_length=255)
@@ -24,6 +29,7 @@ class Skill(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    techs = models.ManyToManyField(Technology, related_name='techs', blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
